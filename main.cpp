@@ -12,15 +12,11 @@ struct vec2
     vec2(float x, float y)
         : x(x), y(y) {}
 
-    
-    vec2 operator+(const vec2& other) const
-    {
+    vec2 operator+(const vec2& other) const{
         return vec2(x + other.x , y + other.y);
     }
 
-
-    vec2 operator-(const vec2& other) const
-    {
+    vec2 operator-(const vec2& other) const{
         return vec2(x - other.x , y - other.y);
     }
 };
@@ -35,7 +31,6 @@ public:
     int health;
     vec2 pos;
     
-
     Entity(){
         health=100;
     }
@@ -57,7 +52,7 @@ public:
 
 
 int main() {
-    
+
     std::cout << "Enter starting pos: " << std::endl;
 
     int x,y;
