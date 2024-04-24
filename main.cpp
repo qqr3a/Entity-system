@@ -41,7 +41,6 @@ public:
     Entity(float x, float y)
         : health(100), pos(x,y) {}
 
-
 public:
 
     void Print(){
@@ -51,27 +50,23 @@ public:
 
 
 
+
+
 int main() {
+    int x,y;
+    float hpdecrease;
 
     std::cout << "Enter starting pos: " << std::endl;
-
-    int x,y;
-
     std::cin >> x;
     std::cin >> y;
     
     Entity e(x,y);
-    
     e.pos = e.pos + vec2(5,7); 
 
     e.Print();
-
-    float hpdecrease;
-    
-    std::cout << "Enter hp decrease: "; std::cin >> hpdecrease;
-
+    std::cout << "Enter hp decrease: ";
+    std::cin >> hpdecrease;
     e.health = e.health - hpdecrease;
 
     e.Print();
-
 }
